@@ -32,61 +32,112 @@ Building a functional machine learning platform requires translating architectur
     \parbox{\textwidth}{\small Lets users select a trained model and make predictions through an embedded Streamlit interface loaded in an iframe, with options to open it in a new tab.}
 \end{figure}
 
-% ===================== REPLACED SECTION =====================
-
+% ===================== COCOMO-II COST ESTIMATION =====================
 \newpage
-\section{Cost Estimation using COCOMO Model}
+\section{Cost Estimation using COCOMO-II Model}
 
-\noindent\textbf{Project Type}
+\subsection*{Step 1: Introduction}
+The COCOMO-II (Constructive Cost Model II) is used to estimate the effort, development time, and cost required for software development. It is suitable for modern applications involving web technologies, APIs, and machine learning systems.
+\vspace{0.4cm}
+
+For the InferX-ML system, the Object Point method of COCOMO-II is used, as it is based on UI screens, APIs, and system components.
+\vspace{0.4cm}
+
+\subsection*{Step 2: Project Type}
 \begin{itemize}
-    \item Organic Mode
+    \item \textbf{Project Type:} Organic
+    \item \textbf{Reason:}
+    \begin{itemize}
+        \item Small development team (3 members)
+        \item Moderate system complexity (Web + ML integration)
+        \item Use of modern frameworks and APIs
+    \end{itemize}
+\end{itemize}
+\vspace{0.4cm}
+
+\subsection*{Step 3: Object Point Analysis}
+\subsubsection*{a) Screens (User Interface Pages)}
+(Based on implemented UI in Chapter 7)
+\vspace{0.2cm}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+    \hline
+    \textbf{Screen Type} & \textbf{Count} & \textbf{Complexity} & \textbf{Weight} & \textbf{Total} \\ \hline
+    Home Page & 1 & Simple & 1 & 1 \\ \hline
+    Login Page & 1 & Simple & 1 & 1 \\ \hline
+    Result Page & 1 & Simple & 1 & 1 \\ \hline
+    Dashboard & 1 & Medium & 2 & 2 \\ \hline
+    Dataset Page & 1 & Medium & 2 & 2 \\ \hline
+    Models Page & 1 & Medium & 2 & 2 \\ \hline
+    Prediction Page & 1 & Medium & 2 & 2 \\ \hline
+    Features Page & 1 & Medium & 2 & 2 \\ \hline
+    Model Training Page & 1 & Difficult & 3 & 3 \\ \hline
+    Pipeline Page & 1 & Difficult & 3 & 3 \\ \hline
+    Model Analysis Page & 1 & Difficult & 3 & 3 \\ \hline
+    \multicolumn{4}{|l|}{\textbf{Total Screen Points}} & \textbf{22} \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection*{b) APIs / External Interfaces}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+    \hline
+    \textbf{API Type} & \textbf{Count} & \textbf{Complexity} & \textbf{Weight} & \textbf{Total} \\ \hline
+    ML Engine API & 1 & Difficult & 10 & 10 \\ \hline
+    Backend API (Flask) & 1 & Difficult & 10 & 10 \\ \hline
+    Gemini API & 1 & Medium & 5 & 5 \\ \hline
+    Groq API & 1 & Medium & 5 & 5 \\ \hline
+    Database Interface & 1 & Medium & 5 & 5 \\ \hline
+    \multicolumn{4}{|l|}{\textbf{Total API Points}} & \textbf{35} \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection*{c) Internal Processing Components}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+    \hline
+    \textbf{Component} & \textbf{Count} & \textbf{Complexity} & \textbf{Weight} & \textbf{Total} \\ \hline
+    Data Preprocessing & 1 & Medium & 15 & 15 \\ \hline
+    Model Selection & 1 & Medium & 15 & 15 \\ \hline
+    Model Storage & 1 & Medium & 15 & 15 \\ \hline
+    Model Training & 1 & Difficult & 20 & 20 \\ \hline
+    Explainability (SHAP) & 1 & Difficult & 20 & 20 \\ \hline
+    Async Processing & 1 & Difficult & 20 & 20 \\ \hline
+    \multicolumn{4}{|l|}{\textbf{Total Component Points}} & \textbf{105} \\ \hline
+    \end{tabular}
+\end{table}
+
+\subsection*{Step 4: Total Object Points}
+\[ UOP = 22 + 35 + 105 = 162 \]
+
+\subsection*{Step 5: Adjusted Object Points}
+Assuming 20\% reuse:
+\[ NOP = 162 \times (1 - 0.20) = 129.6 \approx 130 \]
+
+\subsection*{Step 6: Effort Estimation}
+Productivity Rate = 9.5 Object Points / Person-Month
+\[ Effort = \frac{130}{9.5} \approx 13.7 \approx 14 \text{ Person-Months} \]
+
+\subsection*{Step 7: Development Time}
+Team Size = 3 Members
+\[ Time = \frac{14}{3} \approx 4.5 \text{ Months} \]
+
+\subsection*{Step 8: Cost Estimation}
+\begin{itemize}
+    \item[a)] \textbf{Development Cost:} $4.5 \times 25,000 \times 3 = \text{Rs. } 3,37,500$
+    \item[b)] \textbf{Hardware \& Software Cost:} $\text{Rs. } 45,000$
+    \item[c)] \textbf{Miscellaneous Cost:} $\text{Rs. } 10,000$
 \end{itemize}
 
-\vspace{0.3cm}
-\noindent\textbf{Assumptions}
-\begin{itemize}
-    \item Size = 10 KLOC
-\end{itemize}
+\subsection*{Step 9: Total Cost}
+\[ TotalCost = 3,37,500 + 45,000 + 10,000 = 3,92,500 \]
+\textbf{Total Estimated Cost $\approx$ Rs. 3.9 Lakhs}
+\vspace{0.4cm}
 
-\vspace{0.3cm}
-\noindent\textbf{Effort Estimation}
-
-The effort is calculated using the basic COCOMO formula:
-\[
-E = 2.4 \times (KLOC)^{1.05}
-\]
-
-\[
-E = 2.4 \times (10)^{1.05} \approx 27 \text{ Person-Months}
-\]
-
-\vspace{0.3cm}
-\noindent\textbf{Development Time}
-
-The development time is calculated as:
-\[
-D = 2.5 \times (E)^{0.38}
-\]
-
-\[
-D = 2.5 \times (27)^{0.38} \approx 8 \text{ Months}
-\]
-
-\vspace{0.3cm}
-\noindent\textbf{Cost Estimation}
-
-\begin{itemize}
-    \item Cost per person per month = Rs. 15,000
-    \item Total Cost = $27 \times 15,000 = \text{Rs. } 4,05,000 \approx 4$ Lakhs
-\end{itemize}
-
-\vspace{0.3cm}
-\noindent\textbf{Conclusion}
-
-\begin{itemize}
-    \item Effort: $\sim 27$ Person-Months
-    \item Time: $\sim 8$ Months
-    \item Team Size: 3--4 Members
-\end{itemize}
-
+\subsection*{Step 10: Conclusion}
+The COCOMO-II estimation shows that the InferX-ML system requires approximately \textbf{14 person-months} of effort, with a development duration of around \textbf{4.5 months} for a team of 3 members. The total estimated cost of development is approximately \textbf{Rs. 3.9 Lakhs}, making it a feasible and cost-effective software solution.
 % ===================== END =====================
