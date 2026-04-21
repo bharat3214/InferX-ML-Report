@@ -3,93 +3,119 @@
 This chapter showcases the final outcome of the development process. The results are presented as a series of screenshots that provide a visual tour of the completed web application. These images display the user interface (UI) of various key pages, demonstrating the successful implementation of the project's core functionalities and features as outlined in the design phase.
 \setlength{\fboxsep}{0pt} % no space between image and border
 
+
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.8\textwidth]{images/1.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/1.jpeg}}
     \caption{Home Page}
-    \label{fig:img4}
+    \label{fig:res1}
 \end{figure}
+The home page is the first thing users see when they visit the platform. It clearly communicates the main idea: building ML models without writing any code. The layout is clean with a dark theme, and the two main buttons guide users to either get started right away or learn more about how the platform works.
+
+\clearpage
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.8\textwidth]{images/2.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/2.jpeg}}
     \caption{AutoML Features}
-    \label{fig:img5}
+    \label{fig:res2}
 \end{figure}
+This section gives users a clear picture of what the platform can do. Features like Smart Data Profiling, Explainable AI, and One-Click Export are all listed out. Each one handles a specific part of the ML process automatically, so users do not have to deal with things like encoding or outlier removal on their own.
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.8\textwidth]{images/3.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/3.jpeg}}
     \caption{Login Page}
-    \label{fig:img6}
+    \label{fig:res3}
 \end{figure}
+The login page lets users sign in to their personal workspace where all their experiments and datasets are saved. It also reminds users of the platform's core promise, which is building powerful ML models without needing to write any code. The design is simple and straightforward.
+
+\clearpage
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.8\textwidth]{images/4.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/4.jpeg}}
     \caption{Dashboard Page}
-    \label{fig:img7}
+    \label{fig:res4}
 \end{figure}
+After logging in, users land on the dashboard where they can see a summary of their work at a glance. It shows how many datasets they have, how many models have been trained, and if any training jobs are currently running. The quick action cards make it easy to jump straight into uploading data, starting a new training job, or making predictions.
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.8\textwidth]{images/5.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/5.jpeg}}
     \caption{Dataset Preview Page}
-    \label{fig:img7}
+    \label{fig:res5}
 \end{figure}
+The Datasets page shows all the files a user has uploaded. In this case, the Crop Recommendation dataset is visible with details like the number of rows, columns, and total file size. The platform automatically profiles the dataset so it is ready to be used for training without any extra preparation.
+
+\clearpage
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=15cm, height=10cm]{images/6.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/13.jpeg}}
+    \caption{Dataset Library}
+    \label{fig:res6}
+\end{figure}
+The Dataset Library has 40 ready-to-use datasets covering areas like Agriculture, Medical and Health, Finance, and more. Users can filter by category and pick something to work with right away. Some datasets can also be fetched directly from Kaggle, which is useful for users who want real-world data without having to search for it manually.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/6.jpeg}}
     \caption{Model Training Page}
-    \label{fig:img7}
+    \label{fig:res7}
 \end{figure}
+The training setup page is where users start a new experiment. They give it a name, pick a dataset, and optionally describe their goal in plain language. The platform then uses that description to suggest which column to predict and what type of model to use, saving a lot of manual configuration.
+
+\clearpage
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.8\textwidth]{images/7.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/7.jpeg}}
     \caption{AutoML Pipeline Page}
-    \label{fig:img7}
+    \label{fig:res8}
 \end{figure}
+Once training starts, this page gives users a live view of what is happening. A progress bar shows which stage the pipeline is in, and the developer log on the right side prints out real-time updates as each algorithm is tested. This makes the whole process transparent rather than just showing a loading spinner.
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=1\textwidth]{images/8.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/8.jpeg}}
     \caption{Model Training}
-    \label{fig:img7}
+    \label{fig:res9}
 \end{figure}
+When the training finishes, the platform shows a summary of what it found. In this case, Random Forest came out on top with an accuracy of 99.32 percent. The result is shown clearly so users know right away which model performed best and how well it did, without needing to dig through any logs.
+
+\clearpage
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=1\textwidth]{images/9.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/9.jpeg}}
     \caption{Available Trained Models}
-    \label{fig:img7}
+    \label{fig:res10}
 \end{figure}
+The Models page acts as a library where all trained models are stored. Each model is displayed as a card showing its type, the best algorithm found, and when it was trained. From here users can click to analyze the model, run predictions, or download it for use elsewhere.
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=1\textwidth]{images/12.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/12.jpeg}}
     \caption{Model Analysis Page}
-    \label{fig:img7}
+    \label{fig:res11}
 \end{figure}
+The Model Analysis page gives a detailed breakdown of how each algorithm performed during the AutoML search. A bar chart compares accuracy scores across all tested models, making it easy to see why one was picked over others. Exact metric values like accuracy and F1-score are listed below the chart for reference.
+
+\clearpage
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=1\textwidth]{images/13.jpeg}}
-    \caption{Dataset Preview Page}
-    \label{fig:img7}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[width=1\textwidth]{images/10.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/10.jpeg}}
     \caption{Interface Page}
-    \label{fig:img7}
+    \label{fig:res12}
 \end{figure}
+The prediction form lets users enter values for each feature and get a result from the trained model. In this example, inputs like Nitrogen, Phosphorus, Temperature, and Humidity are entered, and the model returns a crop recommendation. It is simple enough that someone who is not a data scientist can use it without any technical knowledge.
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=1\textwidth]{images/11.jpeg}}
+    \fbox{\includegraphics[width=12cm, height=7cm]{images/11.jpeg}}
     \caption{Result Page}
-    \label{fig:img7}
+    \label{fig:res13}
 \end{figure}
+After submitting the input values, the result page shows the predicted output along with a confidence score. The display is bold and easy to read so users know exactly what the model decided. An input summary is also available below the result in case users want to review what was submitted.
