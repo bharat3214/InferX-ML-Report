@@ -14,6 +14,8 @@
   <img src="https://img.shields.io/badge/LaTeX-Report-blue?logo=latex&logoColor=white" alt="LaTeX Report"/>
   <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Ubuntu-lightgrey" alt="Platform"/>
   <img src="https://img.shields.io/badge/License-Academic-green" alt="License"/>
+  <img src="https://github.com/bharat3214/InferX-ML-Report/actions/workflows/build-and-deploy.yml/badge.svg" alt="Build & Deploy"/>
+  <a href="https://bharat3214.github.io/InferX-ML-Report/"><img src="https://img.shields.io/badge/📄_Live_Report-View_Now-2563eb?style=for-the-badge" alt="Live Report"/></a>
 </p>
 
 ---
@@ -26,6 +28,7 @@
 - [Setup on Linux (Ubuntu)](#-setup-on-linux-ubuntu)
 - [Setup on Windows](#-setup-on-windows)
 - [Compiling the Report](#-compiling-the-report)
+- [CI/CD — Auto Deploy with GitHub Actions](#-cicd--auto-deploy-with-github-actions)
 - [Troubleshooting](#-troubleshooting)
 - [Authors](#-authors)
 
@@ -146,8 +149,8 @@ sudo apt install -y texstudio
 ### Step 5 — Clone / Download the project
 
 ```bash
-git clone <repository-url>
-cd Mini_PrFormat
+git clone https://github.com/bharat3214/InferX-ML-Report.git
+cd InferX-ML-Report
 ```
 
 Or simply copy the project folder to your desired location.
@@ -214,8 +217,8 @@ If the command is not recognised, you may need to add MiKTeX's `bin` directory t
 ### Step 4 — Clone / Download the project
 
 ```powershell
-git clone <repository-url>
-cd Mini_PrFormat
+git clone https://github.com/bharat3214/InferX-ML-Report.git
+cd InferX-ML-Report
 ```
 
 Or download and extract the ZIP file from the repository.
@@ -269,6 +272,46 @@ Remove-Item report.aux, report.log, report.toc, report.lof, report.lot, report.o
 pdflatex report.tex
 pdflatex report.tex
 ```
+
+---
+
+## 🚀 CI/CD — Auto Deploy with GitHub Actions
+
+This project uses **GitHub Actions** to automatically compile the LaTeX report and deploy it to **GitHub Pages** on every push to `main`.
+
+### How it works
+
+```mermaid
+graph LR
+    A[Push to main] --> B[GitHub Actions]
+    B --> C[Compile LaTeX]
+    C --> D[Generate report.pdf]
+    D --> E[Deploy to GitHub Pages]
+    E --> F[Live at bharat3214.github.io/InferX-ML-Report]
+```
+
+1. **Push changes** — Any contributor pushes `.tex` file changes to the `main` branch.
+2. **Auto compile** — GitHub Actions runs `pdflatex` via [`xu-cheng/latex-action`](https://github.com/xu-cheng/latex-action) to build `report.pdf`.
+3. **Auto deploy** — The compiled PDF and a viewer page (`index.html`) are deployed to GitHub Pages.
+4. **Live link** — The report is instantly available at:  
+   👉 **https://bharat3214.github.io/InferX-ML-Report/**
+
+### One-time GitHub Pages setup
+
+To enable GitHub Pages deployment on your repository:
+
+1. Go to your repo on GitHub → **Settings** → **Pages**.
+2. Under **Build and deployment → Source**, select **GitHub Actions**.
+3. That's it! The next push to `main` will trigger the workflow and deploy automatically.
+
+### Workflow file
+
+The pipeline is defined in [`.github/workflows/build-and-deploy.yml`](.github/workflows/build-and-deploy.yml).
+
+| Trigger         | Branch  | What it does                              |
+| --------------- | ------- | ----------------------------------------- |
+| `push`          | `main`  | Compile LaTeX & deploy PDF to GitHub Pages |
+| `workflow_dispatch` | `main` | Manual trigger from the Actions tab    |
 
 ---
 

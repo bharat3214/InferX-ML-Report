@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InferX-ML — Project Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f4f8;
+      color: #1e293b;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      color: #fff;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .12);
+    }
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header p {
+      margin-top: .5rem;
+      font-size: .95rem;
+      opacity: .85;
+      font-weight: 400;
+    }
+    .badge-row {
+      margin-top: 1rem;
+      display: flex;
+      gap: .5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      background: rgba(255,255,255,.15);
+      padding: .3rem .75rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 500;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ── Toolbar ── */
+    .toolbar {
+      max-width: 1000px;
+      width: 100%;
+      margin: 1.25rem auto 0;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .55rem 1.25rem;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: .85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .15s, box-shadow .15s;
+      text-decoration: none;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-outline { background: #fff; color: #1e3a5f; border: 1.5px solid #cbd5e1; }
+
+    /* ── PDF Viewer ── */
+    .viewer-wrapper {
+      flex: 1;
+      max-width: 1000px;
+      width: 100%;
+      margin: 1rem auto 2rem;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .viewer-card {
+      flex: 1;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 75vh;
+    }
+    .viewer-card iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 1.25rem;
+      font-size: .8rem;
+      color: #64748b;
+      border-top: 1px solid #e2e8f0;
+    }
+    footer a { color: #2563eb; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.3rem; }
+      .toolbar { flex-direction: column; align-items: stretch; gap: .5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📄 InferX-ML: Automated ML Pipeline for Training &amp; Inference</h1>
+    <p>Mini Project Report — Department of Information Technology, A.P. Shah Institute of Technology</p>
+    <div class="badge-row">
+      <span class="badge">📘 LaTeX Report</span>
+      <span class="badge">🤖 Machine Learning</span>
+      <span class="badge">🎓 Academic Year 2025–26</span>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <a class="btn btn-outline" href="https://github.com/bharat3214/InferX-ML-Report" target="_blank" rel="noopener">
+      ⭐ GitHub Repo
+    </a>
+    &nbsp;
+    <a class="btn btn-primary" href="report.pdf" download>
+      ⬇ Download PDF
+    </a>
+  </div>
+
+  <div class="viewer-wrapper">
+    <div class="viewer-card">
+      <iframe src="report.pdf" title="InferX-ML Project Report"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    Built with ❤️ by Bharatkumar Gungoman, Alok Gupta &amp; Om Babar
+    &nbsp;·&nbsp;
+    <a href="https://github.com/bharat3214/InferX-ML-Report">View Source on GitHub</a>
+  </footer>
+
+</body>
+</html>
