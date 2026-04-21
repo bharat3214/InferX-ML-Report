@@ -1,0 +1,60 @@
+% Ensure \usepackage{tikz} is in your main .tex file's preamble.
+\begin{titlepage}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \draw[line width=1.5pt]
+        ([xshift=1.5cm, yshift=-1.5cm]current page.north west)
+        rectangle
+        ([xshift=-1.5cm, yshift=1.5cm]current page.south east);
+\end{tikzpicture}
+
+\vspace*{0.20cm}
+{\centering
+A Project Report on\\
+\vspace{0.5cm}
+{\Large\textbf {InferX-ML: 
+Automated ML Pipeline for Training and Inference
+}}\\
+\vspace{0.5cm}
+ Submitted in partial fulfillment of the requirements for the award\\
+of the degree of\\ \vspace{1cm}
+{\large\textbf {Third Year Engineering}}\\
+\vspace{0.3cm}
+in \\
+\vspace{0.3cm}
+{\large\textbf {Information Technology}}\\
+\vspace{0.5cm}
+by\\
+\vspace{0.5cm}
+
+\begin{tabular}{l l}
+{\large \textbf{Bharatkumar Gungoman}} & {\large \textbf{(23104087)}} \\
+{\large \textbf{Alok Gupta}}            & {\large \textbf{(23104045)}} \\
+{\large \textbf{Om Babar}}   & {\large \textbf{(23104217)}} \\
+\end{tabular}
+
+\vspace{1cm}
+
+Under the Guidance of\\ 
+\vspace{0.3cm}
+
+\hspace{.05cm} {\large \textbf {Ms. Sneha Dalvi }}\\
+%\hspace{.05cm} {\large \textbf {Name of Co-Guide }}\\ 
+\vspace{1cm}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{apsit_logo.jpg}
+\end{figure}
+
+\hspace{.04cm}
+\hspace{.04cm}
+
+{\textbf {Department of Information Technology}}\\
+\textbf{\textsf{NBA Accredited}}\\
+A.P. Shah Institute of Technology\\
+G.B.Road,Kasarvadavli, Thane(W)-400615\\
+UNIVERSITY OF MUMBAI\\
+\vspace{0.2cm}
+\textbf{Academic Year 2025-2026}\\
+}
+\end{titlepage}

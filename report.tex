@@ -1,0 +1,71 @@
+% All Rights Reserved @apsitdevopsclub
+% Information Technology Department
+% A.P.Shah Institute of Technology, Thane
+\documentclass[12pt,oneside,a4paper]{report}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{tikz} % Border ke liye zaroori package
+
+
+\textwidth 6.5in
+\textheight 9.5in
+\bibliographystyle{plain}
+
+\begin{document}
+
+% --- FRONT MATTER (bina page numbers ke) ---
+\pagestyle{empty} % Is section ke sabhi pages ke liye page number hide karega
+
+\input{title}
+\clearpage
+
+\input{Certificate}
+\clearpage
+
+\input{Acknowledgement.tex}
+\clearpage
+
+% Table of Contents yahan banega
+\tableofcontents
+\thispagestyle{empty} % TOC page ka number hatane ke liye
+
+% <<< BORDER KE LIYE YEH CODE ADD KAREIN >>>
+\begin{tikzpicture}[remember picture, overlay]
+    \draw[line width=1.5pt]
+        ([xshift=1.5cm, yshift=-1.5cm]current page.north west)
+        rectangle
+        ([xshift=-1.5cm, yshift=1.5cm]current page.south east);
+\end{tikzpicture}
+% <<< BORDER KA CODE YAHAN KHATAM >>>
+
+\clearpage
+
+\input{abstract} % Aapke abstract wale page par border already uski file mein hai
+\clearpage
+
+
+% --- MAIN MATTER (yahan se Arabic numbering shuru hogi) ---
+\pagenumbering{arabic} % Page numbering ko 1, 2, 3... se shuru karega
+\pagestyle{plain} % Har page par neeche center mein page number dikhayega
+
+\input{Introduction.tex}
+\input{Review.tex}
+\input{chapter3.tex}
+\input{chapter4.tex}
+\input{chapter5.tex}
+\input{chapter6.tex}
+\input{Result.tex}
+\input{Conclusion.tex}
+\input{FutureScope.tex}
+\input{Bibliography.tex}
+
+\end{document}

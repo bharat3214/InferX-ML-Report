@@ -1,0 +1,60 @@
+\chapter{Technical Specification}
+\vspace{-1cm}
+
+This chapter describes the technical architecture and technology stack used in the development, deployment, and maintenance of InferX-ML. The platform follows a modern microservices-based architecture integrating a React-based frontend, a Flask-powered backend, and a modular machine learning engine. It leverages PostgreSQL for relational data storage and MinIO for scalable object storage. The entire system is containerized using Docker and orchestrated via Docker Compose, ensuring reproducibility and ease of deployment.
+
+\section{Front-End (Client-Side)}
+
+\begin{description}
+\item[React JS :] Used to build an interactive interfaces.
+\item[Vite :] Provides fast development server, hot module replacement, and optimized builds.
+\item[Tailwind CSS :] Used for responsive UI design and styling.
+\item[React Router :] Enables seamless navigation across different pages.
+\item[Zustand :] Manages global state such as authentication and sessions.
+\item[React Query :] Handles API data fetching, caching, and synchronization.
+\item[Axios :] Used for REST API communication with the backend.
+\item[Streamlit :] Provides ML-specific interfaces.
+\end{description}
+
+\section{Back-End (Server-Side)}
+
+\begin{description}
+\item[Python :] Core programming language for backend and ML engine.
+\item[Flask :] REST API framework for managing datasets, training workflows, and predictions.
+\item[SQLAlchemy :] ORM for database interaction and schema management.
+\item[Celery :] Handles asynchronous model training tasks.
+\item[Redis :] Message broker for task queues and caching.
+\item[PostgreSQL :] Stores user data, experiments, and model metadata.
+\item[MinIO :] Object storage for datasets, models, and artifacts.
+\item[JWT :] Provides secure authentication and session management.
+\item[Google Gemini \& Groq APIs :] Goal analysis and natural language interpretation.
+\end{description}
+
+\section{Machine Learning Engine}
+
+\begin{description}
+\item[Pandas \& NumPy :] Used for data preprocessing and operations.
+\item[Scikit-learn \& XGBoost :] Provide various algorithms.
+\item[TensorFlow / Keras :] Used for deep learning models and image classification.
+\item[Prophet \& Statsmodels :] Used for time-series forecasting.
+\item[SHAP :] Provides model explainability and feature importance insights.
+\item[Joblib / Pickle :] Used for model serialization and deployment.
+\end{description}
+
+\section{Development, Operations and Deployment}
+
+\begin{description}
+\item[Docker :] Containerizes all services for consistent environments.
+\item[Docker Compose :] Manages multi-container application deployment.
+\item[Nginx :] Acts as a reverse proxy for routing and serving frontend.
+\item[Git \& GitHub :] Used for version control and collaboration.
+\end{description}
+
+\section{Development Tools}
+
+\begin{description}
+\item[Visual Studio Code :] Primary development environment.
+\item[npm \& pip :] Manage frontend and backend dependencies.
+\item[Postman :] Used for API testing and debugging.
+\item[pytest :] Used for testing backend and ML pipelines.
+\end{description}

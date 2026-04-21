@@ -1,0 +1,30 @@
+\renewenvironment{abstrac}
+ {
+  \begin{center}
+  \bfseries \abstractname\vspace{-0.5em}\vspace{0pt}
+  \end{center}
+  \vspace{-1em}
+  \list{}{\leftmargin0.0cm \rightmargin\leftmargin}
+  \item\relax}
+ {\endlist}
+\vspace{3 cm}
+\begin{center}
+    \large\textbf{Abstract}
+\end{center}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \draw[line width=1.5pt]
+        ([xshift=1.5cm, yshift=-1.5cm]current page.north west)
+        rectangle
+        ([xshift=-1.5cm, yshift=1.5cm]current page.south east);
+\end{tikzpicture}
+
+InferX ML is a no-code machine learning platform that democratizes the end-to-end machine learning workflow for users without programming expertise. The platform automates dataset ingestion, intelligent data profiling, problem-type detection, preprocessing, model selection, training, evaluation, and explainability across structured (tabular), time-series, and image data modalities.
+
+Leveraging a rule-based AutoML pipeline augmented with AI-powered goal analysis (via Google Gemini and Groq APIs), InferX ML enables users to simply upload a dataset, describe their objective in natural language, and receive a fully-trained, explainable predictive model---complete with an auto-generated prediction interface---without writing a single line of machine learning code.
+
+A key differentiator that sets InferX ML apart from existing tools in the market is its ability to automatically generate a fully functional, interactive prediction user interface immediately after model training, powered by JSON-based UI schemas. While some AutoML platforms offer model training capabilities, very few provide a ready-to-use prediction UI out of the box. InferX ML bridges this gap by delivering both the trained model and a dynamic, form-based interface that allows users to make predictions instantly without any additional development effort.
+
+The system is built on a modern, containerized microservices architecture using React, Flask, Streamlit, PostgreSQL, MinIO, Celery, and Redis, and is designed to be lightweight, open-source, and scalable for educational use, rapid prototyping, and small-to-medium scale analytics.
+\end{abstract}
+
