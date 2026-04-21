@@ -1,10 +1,9 @@
 \chapter{Technical Specification}
 \vspace{-1cm}
 
-The technical architecture and technology stack of InferX-ML encompass a carefully selected set of modern tools and frameworks optimized for building a scalable, maintainable, and production-ready automated machine learning platform. The platform follows a microservices-based architecture integrating a React-based frontend for interactive user experiences, a Flask-powered backend for API orchestration, and a modular Python-based machine learning engine for automated model training and evaluation. It leverages PostgreSQL for relational data storage and MinIO for scalable object storage of datasets, models, and artifacts. The entire system is containerized using Docker and orchestrated via Docker Compose, ensuring reproducibility, environment consistency, and ease of deployment across development, staging, and production environments. The frontend layer is built using React JS with Vite as the build tool, providing fast development iteration through hot module replacement and optimized production bundles. Tailwind CSS is employed for responsive, utility-first styling that adapts seamlessly across desktop and mobile viewports. Client-side state management is handled by Zustand for lightweight global state such as authentication tokens and session data, while React Query manages server state including API data fetching, caching, background refetching, and synchronization. Axios serves as the HTTP client for all REST API communication between the frontend and backend services, and React Router enables client-side navigation across multiple views without full page reloads. The backend layer is powered by Python and the Flask framework, exposing a comprehensive REST API for managing user authentication, dataset operations, training workflows, model management, and prediction services. SQLAlchemy provides an Object-Relational Mapping layer for seamless interaction with the PostgreSQL database, abstracting raw SQL queries into Pythonic operations. Asynchronous and long-running tasks such as model training are offloaded to Celery workers, with Redis serving as both the message broker for task queues and a caching layer for frequently accessed data. JWT-based authentication ensures secure, stateless session management across all API endpoints.
+The technical architecture and technology stack used in the development, deployment, and maintenance of InferX-ML are described herein. The platform follows a modern microservices-based architecture integrating a React-based frontend, a Flask-powered backend, and a modular machine learning engine. PostgreSQL is leveraged for relational data storage and MinIO for scalable object storage. The entire system is containerized using Docker and orchestrated via Docker Compose, ensuring reproducibility and ease of deployment.
 
 
-\newpage
 \section{Front-End (Client-Side)}
 
 \begin{description}
@@ -13,12 +12,11 @@ The technical architecture and technology stack of InferX-ML encompass a careful
 \item[Tailwind CSS :] Used for responsive UI design and styling.
 \item[React Router :] Enables seamless navigation across different pages.
 \item[Zustand :] Manages global state such as authentication and sessions.
-\item[React Query :] Handles API data fetching, caching, and synchronization.
 \item[Axios :] Used for REST API communication with the backend.
 \item[Streamlit :] Provides ML-specific interfaces.
 \end{description}
 
-\newpage
+
 \section{Back-End (Server-Side)}
 
 \begin{description}
@@ -29,11 +27,9 @@ The technical architecture and technology stack of InferX-ML encompass a careful
 \item[Redis :] Message broker for task queues and caching.
 \item[PostgreSQL :] Stores user data, experiments, and model metadata.
 \item[MinIO :] Object storage for datasets, models, and artifacts.
-\item[JWT :] Provides secure authentication and session management.
-\item[Google Gemini \& Groq APIs :] Goal analysis and natural language interpretation.
 \end{description}
 
-\newpage
+
 \section{Machine Learning Engine}
 
 \begin{description}
@@ -45,7 +41,7 @@ The technical architecture and technology stack of InferX-ML encompass a careful
 \item[Joblib / Pickle :] Used for model serialization and deployment.
 \end{description}
 
-\newpage
+
 \section{Development, Operations and Deployment}
 
 \begin{description}
@@ -55,7 +51,7 @@ The technical architecture and technology stack of InferX-ML encompass a careful
 \item[Git \& GitHub :] Used for version control and collaboration.
 \end{description}
 
-\newpage
+
 \section{Development Tools}
 
 \begin{description}
