@@ -30,22 +30,27 @@ Reproducibility remains a core challenge in the field, as discussed by Gundersen
 
 Finally, Vanschoren (2018) in ``Meta-Learning: A Survey'' explores how history-driven automation can optimize the selection of new algorithms. By analyzing the characteristics of an input dataset, the system can suggest candidates with the highest probability of success. InferX ML leverages these meta-learning concepts to guide its internal selection engine, providing users with a high-performance baseline from the very first interaction with the platform. [9]\vspace{0.4cm}
 
+Furthermore, the critical role of interpretability in modern ML systems is formalized by Lundberg and Lee (2017) through their introduction of SHAP (SHapley Additive exPlanations) values. Their work provides the theoretical foundation for the explainability features integrated into InferX ML, ensuring users can trust model outputs. Complementing this, research by Xin et al. (2021) and Waring et al. (2020) emphasizes the practical challenges of productionizing ML models and the necessity of no-code tools for domain experts, reinforcing InferX ML's core objectives. [10, 11, 12]\vspace{0.4cm}
+
 \begin{table}[H]
     \centering
     \caption{Comparative Analysis of Literature Review}
     \label{tab:lit_review}
     \small
-    \begin{tabular}{|p{0.8cm}|p{2.3cm}|p{4.0cm}|p{2.5cm}|p{5.4cm}|}
+    \begin{tabular}{|p{0.8cm}|p{2.2cm}|p{4.0cm}|p{2.2cm}|p{5.2cm}|}
     \hline
-    \textbf{Sr. No} & \textbf{Source \& Year} & \textbf{Title} & \textbf{Author(s)} & \textbf{Key Findings} \\ \hline
-    1 & Springer (2019) & Automated Machine Learning: Methods & Hutter et al. & Established a unified framework for end-to-end automation of ML lifecycles. \\ \hline
-    2 & KBS (2021) & AutoML: A Survey of the State-of-the-Art & He et al. & Comprehensive survey of techniques for neural architecture search and optimization. \\ \hline
-    3 & AIR (2024) & AutoML: Past, Present and Future & Baratchi et al. & Identifies the critical shift toward explainability and human-centric design in AutoML. \\ \hline
-    4 & NeurIPS (2015) & Efficient and Robust AutoML & Feurer et al. & Introduced meta-learning to significantly speed up hyperparameter optimization. \\ \hline
-    5 & ICML (2016) & TPOT: Pipeline Optimization Tool & Olson et al. & Demonstrated genetic programming for automated discovery of optimal ML pipelines. \\ \hline
-    6 & JAIR (2021) & Benchmark of AutoML Frameworks & Zöller et al. & Highlights the portability gap in existing AutoML tools, justifying containerized systems. \\ \hline
-    7 & arXiv (2022) & MLOps: Overview, Definition, Architecture & Kreuzberger et al. & Defines the standard architecture for robust MLOps and continuous model training. \\ \hline
-    8 & AI Mag (2018) & Reproducibility in AI & Gundersen et al. & Establishes reproducibility standards as the foundation for trustworthy AI systems. \\ \hline
-    9 & arXiv (2018) & Meta-Learning: A Survey & Vanschoren, J. & Surveys metadata-driven methods to optimize the selection of machine learning algorithms. \\ \hline
+    \textbf{Sr. No} & \textbf{Author(s)} & \textbf{Title} & \textbf{Source \& Year} & \textbf{Key Findings} \\ \hline
+    1 & Hutter et al. & Automated Machine Learning: Methods & Springer (2019) & Established a unified framework for end-to-end automation of ML lifecycles. \\ \hline
+    2 & He et al. & AutoML: A Survey of the State-of-the-Art & KBS (2021) & Comprehensive survey of techniques for neural architecture search and optimization. \\ \hline
+    3 & Baratchi et al. & AutoML: Past, Present and Future & AIR (2024) & Identifies the critical shift toward explainability and human-centric design in AutoML. \\ \hline
+    4 & Feurer et al. & Efficient and Robust AutoML & NeurIPS (2015) & Introduced meta-learning to significantly speed up hyperparameter optimization. \\ \hline
+    5 & Olson et al. & TPOT: Pipeline Optimization Tool & ICML (2016) & Demonstrated genetic programming for automated discovery of optimal ML pipelines. \\ \hline
+    6 & Zöller et al. & Benchmark of AutoML Frameworks & JAIR (2021) & Highlights the portability gap in existing AutoML tools, justifying containerized systems. \\ \hline
+    7 & Kreuzberger et al. & MLOps: Overview, Definition, Architecture & arXiv (2022) & Defines the standard architecture for robust MLOps and continuous model training. \\ \hline
+    8 & Gundersen et al. & Reproducibility in AI & AI Mag (2018) & Establishes reproducibility standards as the foundation for trustworthy AI systems. \\ \hline
+    9 & Vanschoren, J. & Meta-Learning: A Survey & arXiv (2018) & Surveys metadata-driven methods to optimize the selection of machine learning algorithms. \\ \hline
+    10 & Lundberg \& Lee & Interpreting Model Predictions & NeurIPS (2017) & Introduces SHAP values, providing the theoretical basis for explainability in ML interfaces. \\ \hline
+    11 & Xin et al. & Machine Learning in Production & ACM CSUR (2021) & Reviews practical challenges and architectural solutions for deploying ML models to production. \\ \hline
+    12 & Waring et al. & AutoML: Review and Opportunities & AI in Med (2020) & Highlights the need for robust no-code AutoML tools to empower domain experts. \\ \hline
     \end{tabular}
 \end{table}

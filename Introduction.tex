@@ -28,19 +28,19 @@ To address these challenges, InferX ML proposes an open-source, lightweight, and
 \section{Objectives}
 \begin{itemize}
 \item \textbf{To automatically analyze dataset structure.}\\
-The system performs a comprehensive inspection of uploaded datasets by identifying column data types (numerical, categorical, datetime), detecting missing values and outliers, computing statistical distributions such as mean, median, standard deviation, and skewness, and automatically inferring the target variable. This analysis forms the foundation for all downstream preprocessing and model selection decisions, ensuring that the pipeline adapts intelligently to each unique dataset without requiring any manual configuration from the user.\vspace{0.15cm}
+The system comprehensively inspects datasets to identify data types, missing values, and outliers while computing key statistical distributions. It automatically infers the target variable, adapting the pipeline to each unique dataset without manual configuration.\vspace{0.15cm}
 
 \item \textbf{To preprocess and prepare data for model training.}\\
-The automated preprocessing engine handles a wide range of data preparation tasks including imputation of missing values using mean, median, or mode strategies, one-hot and label encoding of categorical features, min-max and standard scaling of numerical columns, removal of highly correlated or low-variance features, and application of domain-specific feature engineering techniques. The preprocessing strategy is dynamically tailored based on the detected problem type, whether it is classification, regression, clustering, time-series forecasting, or image classification, ensuring optimal data quality before model training begins.\vspace{0.15cm}
+The preprocessing engine handles missing value imputation, categorical encoding, and numerical scaling. It dynamically tailors these techniques based on the detected problem type (e.g., classification, regression), ensuring optimal data quality before training.\vspace{0.15cm}
 
 \item \textbf{To train and select the best machine learning model.}\\
-The platform trains multiple candidate algorithms in parallel including Random Forest, XGBoost, Support Vector Machines, Logistic Regression, ARIMA, Prophet, LSTM, MobileNet, and EfficientNet depending on the problem type. Each model is rigorously evaluated using cross-validation and a comprehensive suite of performance metrics such as accuracy, precision, recall, F1-score, RMSE, MAE, and silhouette score. The system then automatically ranks and selects the best-performing model, ensuring that users always receive the most accurate and reliable predictions possible without needing to manually compare or tune models.\vspace{0.15cm}
+The platform trains multiple candidate algorithms in parallel, rigorously evaluating them using cross-validation and relevant performance metrics. It then automatically ranks and selects the best-performing model, eliminating the need for manual tuning.\vspace{0.15cm}
 
 \item \textbf{To generate a deployable model file (.pkl).}\\
-Once the best model is identified, the trained model along with its complete preprocessing pipeline, feature transformations, and encoding mappings is serialized into a portable pickle (.pkl) file. This self-contained artifact can be deployed independently across different environments, whether on a local machine, a cloud server, or within an existing application, enabling seamless real-world inference without requiring the original training infrastructure or codebase.\vspace{0.15cm}
+The best model, along with its complete preprocessing pipeline and feature transformations, is serialized into a portable pickle (.pkl) file. This self-contained artifact enables seamless, independent deployment across different environments for real-world inference.\vspace{0.15cm}
 
 \item \textbf{To provide a simple interface for model prediction.}\\
-A dedicated Streamlit-based prediction interface allows users to upload new data samples, input feature values through an auto-generated form, and receive instant predictions along with comprehensive SHAP-based explainability reports. The interface visualizes feature importance, prediction confidence, and model reasoning, making the trained model fully accessible and interpretable to non-technical stakeholders such as business analysts, educators, and domain experts who need actionable insights without writing any code.
+A Streamlit-based interface allows users to easily input data and receive instant predictions with SHAP-based explainability reports. It visualizes feature importance and model reasoning, making insights fully accessible to non-technical stakeholders without writing code.
 \end{itemize}
 
 
@@ -48,19 +48,19 @@ A dedicated Streamlit-based prediction interface allows users to upload new data
 \section{Scope}
 \begin{itemize}
 \item \textbf{Automate the complete machine learning workflow.}\\
-The platform covers the entire machine learning lifecycle from initial data upload through automated preprocessing, intelligent model selection, training, hyperparameter tuning, evaluation, and final deployment. Users can go from raw data to a production-ready model in minutes without writing a single line of code. The system handles all intermediate steps including data validation, train-test splitting, cross-validation, and artifact generation, completely eliminating the need for manual coding or data science expertise at any stage of the pipeline.\vspace{0.15cm}
+The platform automates the entire ML lifecycle—from data upload and preprocessing to model selection, training, evaluation, and deployment. Users can seamlessly transition from raw data to a production-ready model in minutes, completely eliminating the need for manual coding or advanced data science expertise.\vspace{0.15cm}
 
 \item \textbf{Analyze and preprocess structured datasets.}\\
-The platform supports multiple input formats including CSV and Excel files, and performs comprehensive automated data profiling that includes statistical summaries, correlation analysis, null value detection, and data type inference. Preprocessing capabilities encompass null imputation, categorical encoding (one-hot and label), numerical scaling (min-max and standard), outlier detection and handling, and intelligent feature selection. These capabilities extend across tabular datasets, time-series data with temporal feature extraction, and image datasets with augmentation and normalization pipelines.\vspace{0.15cm}
+Supporting CSV and Excel formats, the system performs comprehensive data profiling including statistical summaries and data type inference. Its robust preprocessing pipeline handles null imputation, categorical encoding, scaling, and feature selection across tabular, time-series, and image datasets.\vspace{0.15cm}
 
 \item \textbf{Train and select optimal machine learning models.}\\
-The system implements a comprehensive suite of algorithms spanning multiple problem types: classification (Random Forest, XGBoost, Logistic Regression, SVM), regression (Linear Regression, Random Forest, XGBoost), clustering (K-Means, DBSCAN), time-series forecasting (ARIMA, Prophet, LSTM), and image classification (MobileNet, EfficientNet). Each algorithm is trained with optimized hyperparameters, evaluated against relevant metrics, and ranked automatically so that only the best-performing model is selected for deployment and inference.\vspace{0.15cm}
+The system supports a diverse suite of algorithms for classification, regression, clustering, time-series forecasting, and image classification. Each algorithm is trained with optimized hyperparameters, rigorously evaluated, and automatically ranked to ensure only the best model is selected for deployment.\vspace{0.15cm}
 
 \item \textbf{Generate deployable model files for real-world use.}\\
-The platform exports fully trained models as serialized pickle (.pkl) artifacts that are bundled together with their complete preprocessing pipelines, feature encoders, and scaling transformers. These self-contained model packages are portable and production-ready, designed for seamless integration into external applications, REST APIs, batch processing systems, or any Python-based environment. This ensures that predictions made in production are fully consistent with the training environment without any additional configuration.\vspace{0.15cm}
+Fully trained models are exported as serialized pickle (.pkl) artifacts, bundled with their complete preprocessing pipelines and feature transformers. These portable, production-ready packages integrate seamlessly into external applications or APIs, ensuring consistent predictions without additional configuration.\vspace{0.15cm}
 
 \item \textbf{Provide a simple interface for real-time predictions.}\\
-The platform offers a dedicated Streamlit-powered user interface where users can upload new datasets or input individual feature values through dynamically generated forms to receive real-time predictions. The interface also displays comprehensive SHAP-based model explanations including feature importance charts, waterfall plots, and prediction confidence scores. This makes the entire prediction and interpretation workflow accessible to non-technical users including business analysts, researchers, educators, and healthcare professionals who require actionable data-driven insights without any programming knowledge.
+A Streamlit-powered UI enables users to easily upload new datasets or input features for real-time predictions. It provides comprehensive SHAP-based model explanations and feature importance charts, making the entire predictive workflow fully accessible to non-technical users seeking data-driven insights.
 \end{itemize}
 
 \newpage
